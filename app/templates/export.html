@@ -1,0 +1,15 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}Export Terms{% endblock %}
+
+{% block navbar %}
+<div class="navbar navbar-fixed-top">
+  <!-- ... -->
+</div>
+{% endblock %}
+
+{% block content %}
+    <h1>Export done!</h1>
+    <form method=post enctype=multipart/form-data>
+        <a href='/download'><input type=button value="Download"></a>
+    </form>
+{% endblock %}

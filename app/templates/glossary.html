@@ -1,0 +1,26 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}Your Glossary{% endblock %}
+
+{% block navbar %}
+<div class="navbar navbar-fixed-top">
+  <!-- ... -->
+</div>
+{% endblock %}
+
+{% block content %}
+    <h1>Here's Your Glossary</h1>
+
+    {% for term in terms %}
+        <h3>{{term}}</h3>
+    {% endfor %}
+
+    <form action='/export' method=post enctype=multipart/form-data>
+        <select name="filetype">
+            <option value="CSV">CSV</option>
+            <option value="TBX">TBX</option>
+            <option value="MultiTerm">MultiTerm</option>
+        </select>
+        <!--<a href="/export"><input type=button value="Export"></a>-->
+        <input type=submit value="Export">
+    </form>
+{% endblock %}

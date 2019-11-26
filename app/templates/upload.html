@@ -1,0 +1,17 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}Upload XLIFF files{% endblock %}
+
+{% block navbar %}
+<div class="navbar navbar-fixed-top">
+  <!-- ... -->
+</div>
+{% endblock %}
+
+{% block content %}
+    <h1>Upload new File</h1>
+    <form method=post enctype=multipart/form-data>
+      <input type=file name=file>
+      <input type=submit value=Upload>
+      <a href="/get_glossary"><input type=button value="Get Glossary"></a>
+    </form>
+{% endblock %}
